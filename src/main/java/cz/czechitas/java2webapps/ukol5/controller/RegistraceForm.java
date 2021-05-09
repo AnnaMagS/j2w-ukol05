@@ -13,11 +13,7 @@ public class RegistraceForm {
     @NotNull
     @NotBlank
     private String prijmeni;
-    @NotNull
-    @NotBlank
     private LocalDate vek;
-    @NotNull
-    @NotBlank
     private Pohlavi pohlavi;
     private Sport sport;
     private String turnus;

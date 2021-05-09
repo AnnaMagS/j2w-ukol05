@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
+
 /**
  * Kontroler obsluhující registraci účastníků dětského tábora.
  */
@@ -21,9 +23,9 @@ public class RegistraceController {
   }
 
   @PostMapping("")
-  public Object form(@ModelAttribute("form") RegistraceForm form, BindingResult bindingResult) {
+  public Object form(@ModelAttribute("form") @Valid RegistraceForm form, BindingResult bindingResult) {
     if (bindingResult.hasErrors()) {
-      return "/formular";
+      return "formular";
     }
 
 /*    if (form.getVek() < 18) {
@@ -34,7 +36,7 @@ public class RegistraceController {
 
     }*/
 
-    return new ModelAndView("/registrovano")
+    return new ModelAndView("registrovano")
       //      .addObject("kod", Math.abs(random.nextInt()))
             .addObject("email", form.getEmail());
   }
