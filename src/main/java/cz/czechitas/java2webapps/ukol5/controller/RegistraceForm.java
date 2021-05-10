@@ -15,7 +15,6 @@ public class RegistraceForm {
     private String vek;
     @NotNull
     private Pohlavi pohlavi;
-    @NotNull
     private Sport sport;
     @NotEmpty
     private String turnus;

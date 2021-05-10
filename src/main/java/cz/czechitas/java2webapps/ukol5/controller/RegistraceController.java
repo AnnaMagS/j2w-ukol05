@@ -30,6 +30,7 @@ public class RegistraceController {
   public Object form(@ModelAttribute("form") @Valid RegistraceForm form, BindingResult bindingResult) {
   //public Object form(@ModelAttribute("form") RegistraceForm form, BindingResult bindingResult) {
     if (bindingResult.hasErrors()) {
+      System.out.println("Spadlo to");
       return "/formular";
     }
 
