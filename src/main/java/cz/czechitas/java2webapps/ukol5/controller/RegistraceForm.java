@@ -1,25 +1,25 @@
 package cz.czechitas.java2webapps.ukol5.controller;
 
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.util.EnumSet;
 
 public class RegistraceForm {
 
+    @NotEmpty
     private String jmeno;
-    @NotNull
-    @NotBlank
+    @NotEmpty
     private String prijmeni;
-    @NotNull
+    @NotEmpty
     private String vek;
+    @NotNull
     private Pohlavi pohlavi;
+    @NotNull
     private Sport sport;
+    @NotEmpty
     private String turnus;
     private String email;
-    @Email
-    @NotBlank
     private String telefon;
 
 

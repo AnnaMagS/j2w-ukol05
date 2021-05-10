@@ -10,7 +10,7 @@
     <div class="kosik">
         <h1>Registrace</h1>
         <div>Registrace byla vytvořena.
-            <span th:unless="${#strings.isEmpty(email)}">Na e-mail <span th:text="${email}">zakaznik@example.com</span> byla zaslána
+            <span th:unless="${#strings.isEmpty(form.getEmail())}">Na e-mail <span th:text="${form.getEmail()}">zakaznik@example.com</span> byla zaslána
                 rekapitulace registrace.</span>
         </div>
     </div>
