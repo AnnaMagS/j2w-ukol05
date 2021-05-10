@@ -5,6 +5,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
@@ -13,11 +14,12 @@ import javax.validation.Valid;
  * Kontroler obsluhující registraci účastníků dětského tábora.
  */
 @Controller
+@RequestMapping("/")
 public class RegistraceController {
 
-  @GetMapping("/")
+  @GetMapping("")
   public ModelAndView formular() {
-    ModelAndView formular = new ModelAndView("formular");
+    ModelAndView formular = new ModelAndView("/formular");
     formular.addObject("form",new RegistraceForm());
     return formular;
   }
@@ -36,9 +38,9 @@ public class RegistraceController {
 
     }*/
 
-    return new ModelAndView("registrovano")
+    return new ModelAndView("/registrovano")
       //      .addObject("kod", Math.abs(random.nextInt()))
-            .addObject("email", form.getEmail());
+            .addObject("registr", form);
   }
 
 }

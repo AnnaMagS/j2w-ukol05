@@ -4,7 +4,6 @@ package cz.czechitas.java2webapps.ukol5.controller;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import java.time.LocalDate;
 import java.util.EnumSet;
 
 public class RegistraceForm {
@@ -13,7 +12,8 @@ public class RegistraceForm {
     @NotNull
     @NotBlank
     private String prijmeni;
-    private LocalDate vek;
+    @NotNull
+    private String vek;
     private Pohlavi pohlavi;
     private Sport sport;
     private String turnus;
@@ -44,17 +44,17 @@ public class RegistraceForm {
     }
 
 
-    public LocalDate getVek() {
+    public String getVek() {
         return vek;
     }
 
-    /*public void setVek(LocalDate vek) {
-        this.vek = vek;
-    }*/
-
     public void setVek(String vek) {
-        this.vek = LocalDate.parse(vek);
+        this.vek = vek;
     }
+
+    /*public void setVek(String vek) {
+        this.vek = LocalDate.parse(vek);
+    }*/
 
     public Pohlavi getPohlavi() {
         return pohlavi;
