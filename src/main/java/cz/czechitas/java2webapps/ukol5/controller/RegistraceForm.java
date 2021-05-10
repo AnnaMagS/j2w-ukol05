@@ -20,9 +20,6 @@ public class RegistraceForm {
     private String turnus;
     private String email;
     private String telefon;
-
-
-
     private EnumSet<Sport>vyber;
 
 
@@ -50,10 +47,6 @@ public class RegistraceForm {
     public void setVek(String vek) {
         this.vek = vek;
     }
-
-    /*public void setVek(String vek) {
-        this.vek = LocalDate.parse(vek);
-    }*/
 
     public Pohlavi getPohlavi() {
         return pohlavi;

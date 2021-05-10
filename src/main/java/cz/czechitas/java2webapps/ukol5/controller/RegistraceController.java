@@ -28,9 +28,7 @@ public class RegistraceController {
 
   @PostMapping("")
   public Object form(@ModelAttribute("form") @Valid RegistraceForm form, BindingResult bindingResult) {
-  //public Object form(@ModelAttribute("form") RegistraceForm form, BindingResult bindingResult) {
     if (bindingResult.hasErrors()) {
-      System.out.println("Spadlo to");
       return "/formular";
     }
 
@@ -42,8 +40,12 @@ public class RegistraceController {
       return "/formular";
     }
 
+    if (form.getVyber().size()<2){
+      bindingResult.rejectValue("vyber", "", "Musíš si vybrat alespoň dva sporty");
+      return "/formular";
+    }
+
     return new ModelAndView("/registrovano")
-      //      .addObject("kod", Math.abs(random.nextInt()))
             .addObject("registr", form);
   }
 

@@ -53,7 +53,7 @@
 
     <div class="radek">
         <input type="checkbox" th:field="${form.vyber}" value="CYKLISTIKA"/>
-        <label th:for="${#ids.prev('vyber')}">cyklistika</label>
+        <label th:for="${#ids.prev('vyber')}">Cyklistika</label>
     </div>
     <div class="radek">
         <input type="checkbox" th:field="${form.vyber}" value="FOTBAL"/>
@@ -68,6 +68,7 @@
         <input type="checkbox" th:field="${form.vyber}" value="FLORBAL"/>
         <label th:for="${#ids.prev('vyber')}">Florbal</label>
     </div>
+    <div class="error" th:if="${#fields.hasErrors('form.vyber')}" th:errors="${form.vyber}"></div>
 
     <div class="radek controls">
         <button class="primary">Registrovat</button>
