@@ -22,7 +22,7 @@
     </select>
     <div class="error" th:if="${#fields.hasErrors('form.turnus')}" th:errors="${form.turnus}"></div>
 
-    <div class="radek">Pohlavi:</div>
+    <div class="radek">Pohlaví:</div>
     <div class="skupina">
         <div>
             <input id="pohlavi1" type="radio" th:field="${form.pohlavi}" value="ZENA"/>
@@ -35,21 +35,35 @@
     </div>
     <div class="error" th:if="${#fields.hasErrors('form.pohlavi')}" th:errors="${form.pohlavi}"></div>
 
+    <div class="radek">
     <label for="jmeno" class="radek">Jméno</label>
     <input id="jmeno" type="text" th:field="${form.jmeno}"/>
     <div class="error" th:if="${#fields.hasErrors('form.jmeno')}" th:errors="${form.jmeno}"></div>
+    </div>
 
+    <div class="radek">
     <label for="prijmeni" class="radek">Příjmení:</label>
     <input id="prijmeni" type="text" th:field="${form.prijmeni}"/>
     <div class="error" th:if="${#fields.hasErrors('form.prijmeni')}" th:errors="${form.prijmeni}"></div>
+    </div>
 
+    <div class="radek">
     <label for="vek" class="radek">Datum narození:</label>
     <input id="vek" type="date" th:field="${form.vek}"/>
     <div class="error" th:if="${#fields.hasErrors('form.vek')}" th:errors="${form.vek}"></div>
+    </div>
 
+    <div class="radek">
+    <label for="telefon" class="radek">Telefon:</label>
+    <input id="telefon" type="text" th:field="${form.telefon}"/>
+    <div class="error" th:if="${#fields.hasErrors('form.telefon')}" th:errors="${form.telefon}"></div>
+    </div>
+
+    <div class="radek">
     <label for="email" class="radek">E-mail:</label>
     <input id="email" type="email" th:field="${form.email}"/>
     <div class="error" th:if="${#fields.hasErrors('form.email')}" th:errors="${form.email}"></div>
+    </div>
 
     <div class="radek">
         <input type="checkbox" th:field="${form.vyber}" value="CYKLISTIKA"/>
@@ -71,7 +85,7 @@
     <div class="error" th:if="${#fields.hasErrors('form.vyber')}" th:errors="${form.vyber}"></div>
 
     <div class="radek controls">
-        <button class="primary">Registrovat</button>
+        <button class="submit">Registrovat</button>
     </div>
 </form>
 

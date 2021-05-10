@@ -20,6 +20,7 @@ public class RegistraceForm {
     private String turnus;
     private String email;
     private String telefon;
+    @NotNull
     private EnumSet<Sport>vyber;
 
 
